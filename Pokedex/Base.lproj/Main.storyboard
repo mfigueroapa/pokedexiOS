@@ -35,19 +35,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="149" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsB-w3-NDo">
-                                                    <rect key="frame" x="53" y="103" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kky-nt-FMC">
-                                                    <rect key="frame" x="23" y="0.0" width="103" height="103"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kky-nt-FMC">
+                                                    <rect key="frame" x="23" y="14" width="103" height="103"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="103" id="Sto-hb-9dV"/>
+                                                        <constraint firstAttribute="width" constant="103" id="p87-rc-sot"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="Kky-nt-FMC" firstAttribute="centerY" secondItem="rvp-eu-Ssl" secondAttribute="centerY" id="4XN-YA-0fV"/>
+                                            <constraint firstItem="Kky-nt-FMC" firstAttribute="centerX" secondItem="rvp-eu-Ssl" secondAttribute="centerX" id="Tvx-AK-hKv"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
