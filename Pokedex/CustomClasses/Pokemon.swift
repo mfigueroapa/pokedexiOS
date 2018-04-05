@@ -12,4 +12,9 @@ class Pokemon : Decodable {
     
     var name : String?
     var url : String?
+    
+    init(_ aName: String, _ aUrl: String) {
+        name = aName
+        url = aUrl
+    }
 }
