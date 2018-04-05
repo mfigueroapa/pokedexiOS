@@ -13,7 +13,9 @@ class PokeCollectionCellViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Model.initialize()
         print("main vc loaded")
+        
 
         
     }

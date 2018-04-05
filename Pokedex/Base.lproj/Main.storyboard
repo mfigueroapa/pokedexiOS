@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Poke Collection Cell View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PokeCollectionCellViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rvp-eu-Ssl">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rvp-eu-Ssl" customClass="PokeCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="149" height="131"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -42,12 +42,25 @@
                                                         <constraint firstAttribute="width" constant="103" id="p87-rc-sot"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVD-8p-y1i">
+                                                    <rect key="frame" x="65" y="118" width="19" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="Kky-nt-FMC" firstAttribute="centerY" secondItem="rvp-eu-Ssl" secondAttribute="centerY" id="4XN-YA-0fV"/>
+                                            <constraint firstItem="gVD-8p-y1i" firstAttribute="centerX" secondItem="rvp-eu-Ssl" secondAttribute="centerX" id="Omj-l3-EWD"/>
+                                            <constraint firstAttribute="bottom" secondItem="gVD-8p-y1i" secondAttribute="bottom" constant="1" id="Pa7-vC-Tut"/>
                                             <constraint firstItem="Kky-nt-FMC" firstAttribute="centerX" secondItem="rvp-eu-Ssl" secondAttribute="centerX" id="Tvx-AK-hKv"/>
+                                            <constraint firstItem="gVD-8p-y1i" firstAttribute="top" secondItem="Kky-nt-FMC" secondAttribute="bottom" constant="1" id="qlA-pH-PHl"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="Kky-nt-FMC" id="VGU-1g-gFp"/>
+                                            <outlet property="nameLabel" destination="gVD-8p-y1i" id="EMe-Sx-2Xc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -62,6 +75,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="6IF-ZD-PhE"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ctK-v8-yfF" id="l6m-fJ-YGA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
