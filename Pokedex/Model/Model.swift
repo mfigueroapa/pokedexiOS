@@ -5,6 +5,7 @@
 //  Created by Mauricio Figueroa on 4/4/18.
 //  Copyright © 2018 Mauricio Figueroa. All rights reserved.
 //
+//
 import UIKit
 
 class Model {
@@ -15,16 +16,20 @@ class Model {
     
     static func initialize() {
         print("Model initialized")
-        Model.getJSONDataEveryPokemon()
-//        Model.getJSONDataPokemonForm()
-        print(allPokemon)
-        for pk in allPokemon {
-            print("swag")
-            print(pk)
+        //Con
+        Model.getJSONDataEveryPokemon() { allPokemon in //Aseguramos que el valor de allPokemon sea actualizado/regresado una vez que la descarga de datos termino.
+            print("Primer intento de print", allPokemon[24].name!)
+            for pk in allPokemon {
+                print("swag")
+                print(pk)
+            }
         }
+//        Model.getJSONDataPokemonForm() 
     }
+
     
-    static func getJSONDataEveryPokemon() {
+    
+    static func getJSONDataEveryPokemon(completion: @escaping ([Pokemon]) -> ()) {
         let jsonUrlString = "https://pokeapi.co/api/v2/pokemon/?limit=995" //En esta url se encuentran todos los pokemon en un arreglo, y cada uno tiene dos valores asociados: nombre y url (en url se encuentra toda la demas informacion como su imagen, etc.)
         guard let url = URL(string:jsonUrlString) else {return}
         print("Print de jsonUrlString: ", jsonUrlString)
@@ -59,6 +64,7 @@ class Model {
                     print("-------")
                     print("Numero de poke: \(numberOfPokemon)")
                 }//end while
+                completion(allPokemon) //Con completion vamos a avisar cuando el data task asincro (todos los datos json obtenidos) haya terminado de modo que que regresamos el valor allPokemon cuando este ya este lleno debido a que los datos ya se han terminado de bajar. De este aseguramos regresar el arreglo completo unicamente cuando se obtuvieron TODOS los valores.
             }//end do
             catch let jsonErr {
                 print("Error serializing json: ", jsonErr)

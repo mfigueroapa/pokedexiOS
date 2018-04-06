@@ -22,7 +22,10 @@ class PokeCollectionCellViewController: UIViewController {
     
  
 
-  
+    @IBAction func buttonPRessed(_ sender: Any) {
+        print("Segundo intento de print", Model.allPokemon)
+    }
+    
    
 
 }
