@@ -18,45 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pkdex" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-4U-cu7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZrF-YE-X2R">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Igl-sr-Lqm">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ctK-v8-yfF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9wf-Ci-Uv3">
-                                    <size key="itemSize" width="149" height="131"/>
+                                    <size key="itemSize" width="90" height="88"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pokecell" id="rvp-eu-Ssl" customClass="PokeCell" customModule="Pokedex" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="149" height="131"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="149" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kky-nt-FMC">
-                                                    <rect key="frame" x="23" y="14" width="95" height="95"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="103" id="Sto-hb-9dV"/>
-                                                        <constraint firstAttribute="width" constant="103" id="p87-rc-sot"/>
-                                                    </constraints>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kky-nt-FMC">
+                                                    <rect key="frame" x="12" y="6" width="67" height="62"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVD-8p-y1i">
-                                                    <rect key="frame" x="50.5" y="117" width="48.5" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVD-8p-y1i">
+                                                    <rect key="frame" x="14" y="62" width="93" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="Kky-nt-FMC" firstAttribute="centerY" secondItem="rvp-eu-Ssl" secondAttribute="centerY" id="4XN-YA-0fV"/>
-                                            <constraint firstItem="gVD-8p-y1i" firstAttribute="centerX" secondItem="rvp-eu-Ssl" secondAttribute="centerX" id="Omj-l3-EWD"/>
-                                            <constraint firstAttribute="bottom" secondItem="gVD-8p-y1i" secondAttribute="bottom" id="Pa7-vC-Tut"/>
-                                            <constraint firstItem="Kky-nt-FMC" firstAttribute="centerX" secondItem="rvp-eu-Ssl" secondAttribute="centerX" id="Tvx-AK-hKv"/>
-                                            <constraint firstItem="gVD-8p-y1i" firstAttribute="top" secondItem="Kky-nt-FMC" secondAttribute="bottom" id="qlA-pH-PHl"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="Kky-nt-FMC" id="VGU-1g-gFp"/>
                                             <outlet property="nameLabel" destination="gVD-8p-y1i" id="EMe-Sx-2Xc"/>
@@ -68,8 +70,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ctK-v8-yfF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="601-ux-Kng"/>
+                            <constraint firstItem="AMb-4U-cu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Fv-YL-0ZF"/>
                             <constraint firstItem="ctK-v8-yfF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ec3-P8-Trm"/>
+                            <constraint firstItem="ZrF-YE-X2R" firstAttribute="centerY" secondItem="AMb-4U-cu7" secondAttribute="centerY" id="KJO-mD-27m"/>
                             <constraint firstItem="ctK-v8-yfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L8W-vO-PxM"/>
+                            <constraint firstItem="AMb-4U-cu7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RUC-ds-2Ms"/>
+                            <constraint firstItem="AMb-4U-cu7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RXg-B3-g4D"/>
+                            <constraint firstItem="AMb-4U-cu7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="aHN-ZE-eC6"/>
+                            <constraint firstItem="ZrF-YE-X2R" firstAttribute="centerX" secondItem="AMb-4U-cu7" secondAttribute="centerX" id="cl1-Gn-jKn"/>
+                            <constraint firstItem="ZrF-YE-X2R" firstAttribute="height" secondItem="AMb-4U-cu7" secondAttribute="height" id="tOQ-yR-VDr"/>
+                            <constraint firstItem="ZrF-YE-X2R" firstAttribute="width" secondItem="AMb-4U-cu7" secondAttribute="width" id="xsj-Q9-ve7"/>
                             <constraint firstItem="ctK-v8-yfF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zUM-vs-azD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -102,4 +112,7 @@
             <point key="canvasLocation" x="341.60000000000002" y="791.15442278860576"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pkdex" width="320" height="480"/>
+    </resources>
 </document>
