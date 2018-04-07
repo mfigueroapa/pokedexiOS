@@ -28,15 +28,16 @@ extension UIImageView {
         downloadedFrom(url: url, contentMode: mode)
     }
 }
-class PokeCollectionCellViewController: UIViewController, UICollectionViewDataSource {
+class PokeCollectionCellViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadJSONPokeNames(uri:"https://pokeapi.co/api/v2/pokemon/?limit=995") { _ in
+        loadPokedexInfo(uri:"https://pokeapi.co/api/v2/pokemon/?limit=995") { _ in
             print("success")
             self.collectionView.dataSource = self
+            self.collectionView.delegate = self
         }
         print("main vc loaded")
     
@@ -58,7 +59,14 @@ class PokeCollectionCellViewController: UIViewController, UICollectionViewDataSo
         return cell
     }
     
-    func loadJSONPokeNames(uri: String, completion: @escaping ([Dex]) -> ()) {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.width)
+        return CGSize(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.height/6)
+    }
+
+    
+    func loadPokedexInfo(uri: String, completion: @escaping ([Dex]) -> ()) {
         let jsonUrlString = uri
         guard let url = URL(string:jsonUrlString) else {return}
         URLSession.shared.dataTask(with: url) { (data, response, err) in
@@ -68,8 +76,8 @@ class PokeCollectionCellViewController: UIViewController, UICollectionViewDataSo
             do {
                 Model.dex = [try JSONDecoder().decode(Dex.self, from: data)]
             }//end do
-            catch let jsonErr {
-                print("Error serializing json: ", jsonErr)
+            catch let jsonError {
+                print("Error serializing json: ", jsonError)
             }//end catch
             DispatchQueue.main.async {
                 completion(Model.dex)

@@ -13,6 +13,5 @@ class Model {
     
     static func initialize() {
         print("Model initialized")
-
     }
 }

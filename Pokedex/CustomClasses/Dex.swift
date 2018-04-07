@@ -10,6 +10,5 @@ import Foundation
 
 class Dex : Decodable {
     var count : Int?
-    var previous : String?
     var results : Array<Pokemon>? = []
 }
