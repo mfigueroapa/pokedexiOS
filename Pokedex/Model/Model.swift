@@ -11,6 +11,7 @@ import UIKit
 class Model {
     static var dex : Array<Dex> = []
     static var pokemonIndex = Int()
+    static var image = UIImageView()
     
     //Examples
     //

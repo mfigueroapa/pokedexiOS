@@ -33,6 +33,10 @@ class PokemonViewController: UIViewController {
             self.pokemonTypeLabel.text = pokemon.types![0].type!.name!
             self.heightLabel.text = "Height: \(pokemon.height!) in"
             self.weightLabel.text = "Weight: \(pokemon.weight!) lbs"
+//            self.pokemonImageView = Model.image
+            var defaultLink = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(Model.pokemonIndex).png"
+            self.pokemonImageView.downloadedFrom(link: defaultLink)
+            
             
         }
     }
@@ -58,3 +62,5 @@ class PokemonViewController: UIViewController {
     }
 
 }
+
+
