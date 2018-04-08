@@ -62,7 +62,7 @@ class PokeCollectionCellViewController: UIViewController, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print(UIScreen.main.bounds.height)
         print(UIScreen.main.bounds.width)
-        return CGSize(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.height/6)
+        return CGSize(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.height/8)
     }
 
     
