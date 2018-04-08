@@ -23,6 +23,8 @@
 		22B0CB4C20798F2C00126A46 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB4B20798F2C00126A46 /* RoundedButton.swift */; };
 		22B0CB4E207990F700126A46 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB4D207990F700126A46 /* RoundedImageView.swift */; };
 		22B0CB5020799B6900126A46 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB4F20799B6900126A46 /* PokemonViewController.swift */; };
+		22B0CB56207AB9DB00126A46 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB55207AB9DB00126A46 /* Type.swift */; };
+		22B0CB58207ABE7D00126A46 /* EachType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB57207ABE7D00126A46 /* EachType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		22B0CB4B20798F2C00126A46 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		22B0CB4D207990F700126A46 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		22B0CB4F20799B6900126A46 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
+		22B0CB55207AB9DB00126A46 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		22B0CB57207ABE7D00126A46 /* EachType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				223CC6F72075DB5F0012EEC6 /* Dex.swift */,
 				223CC6EE20759F300012EEC6 /* PokeCell.swift */,
 				223CC6F02075A0010012EEC6 /* Pokemon.swift */,
+				22B0CB55207AB9DB00126A46 /* Type.swift */,
+				22B0CB57207ABE7D00126A46 /* EachType.swift */,
 				223CC71B2076A8C20012EEC6 /* Forms.swift */,
 				223CC71D2076A98F0012EEC6 /* Form.swift */,
 			);
@@ -202,9 +208,11 @@
 			files = (
 				223CC6E020759A1C0012EEC6 /* Pokedex.xcdatamodeld in Sources */,
 				223CC71C2076A8C20012EEC6 /* Forms.swift in Sources */,
+				22B0CB58207ABE7D00126A46 /* EachType.swift in Sources */,
 				22B0CB4920798DF000126A46 /* GradientView.swift in Sources */,
 				22B0CB5020799B6900126A46 /* PokemonViewController.swift in Sources */,
 				223CC6D820759A1C0012EEC6 /* AppDelegate.swift in Sources */,
+				22B0CB56207AB9DB00126A46 /* Type.swift in Sources */,
 				223CC6ED20759ED10012EEC6 /* PokeCollectionCellViewController.swift in Sources */,
 				223CC6F62075D3D80012EEC6 /* Model.swift in Sources */,
 				22B0CB4C20798F2C00126A46 /* RoundedButton.swift in Sources */,

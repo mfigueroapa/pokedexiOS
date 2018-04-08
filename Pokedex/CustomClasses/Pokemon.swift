@@ -12,9 +12,13 @@ class Pokemon : Decodable {
     
     var name : String?
     var weight : Int?
+    var height : Int?
+    var types : Array<Type>? = []
     
-    init(_ aName: String, _ aWeight: Int) {
+    init(_ aName: String, _ aWeight: Int, _ aHeight: Int, someTypes: [Type]) {
         name = aName
         weight = aWeight
+        height = aHeight
+        types = someTypes
     }
 }

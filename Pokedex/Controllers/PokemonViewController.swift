@@ -8,15 +8,32 @@
 
 import UIKit
 
+
+
+
 class PokemonViewController: UIViewController {
     @IBOutlet weak var pokemonName: UILabel!
+    
+    @IBOutlet weak var pokemonTypeLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    
+    @IBOutlet weak var pokemonImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadJSONPokemon(uri:"https://pokeapi.co/api/v2/pokemon/\(Model.pokemonIndex)/") { pokemon in
             print("pokedata fetched")
             print(pokemon.name!)
+            print(pokemon.height!)
+            print(pokemon.weight!)
+//            print(pokemon.types![0].name as Any)
+//            print(pokemon.types![0].slot)
             self.pokemonName.text = pokemon.name!
+            self.pokemonTypeLabel.text = pokemon.types![0].type!.name!
+            self.heightLabel.text = "Height: \(pokemon.height!) in"
+            self.weightLabel.text = "Weight: \(pokemon.weight!) lbs"
+            
         }
     }
     
