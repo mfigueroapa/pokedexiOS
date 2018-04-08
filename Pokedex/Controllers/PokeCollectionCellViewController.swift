@@ -34,7 +34,7 @@ class PokeCollectionCellViewController: UIViewController, UICollectionViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPokedexInfo(uri:"https://pokeapi.co/api/v2/pokemon/?limit=995") { _ in
+        loadJSONPokedex(uri:"https://pokeapi.co/api/v2/pokemon/?limit=995") { _ in
             print("success")
             self.collectionView.dataSource = self
             self.collectionView.delegate = self
@@ -60,13 +60,16 @@ class PokeCollectionCellViewController: UIViewController, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(UIScreen.main.bounds.height)
-        print(UIScreen.main.bounds.width)
         return CGSize(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.height/8)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "pokemonInfo", sender: AnyObject.self)
+        Model.pokemonIndex = indexPath.row+1
     }
 
     
-    func loadPokedexInfo(uri: String, completion: @escaping ([Dex]) -> ()) {
+    func loadJSONPokedex(uri: String, completion: @escaping ([Dex]) -> ()) {
         let jsonUrlString = uri
         guard let url = URL(string:jsonUrlString) else {return}
         URLSession.shared.dataTask(with: url) { (data, response, err) in
@@ -84,5 +87,7 @@ class PokeCollectionCellViewController: UIViewController, UICollectionViewDataSo
             }
         }.resume()
     }
+    
+
 
 }

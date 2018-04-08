@@ -11,10 +11,10 @@ import Foundation
 class Pokemon : Decodable {
     
     var name : String?
-    var url : String?
+    var weight : Int?
     
-    init(_ aName: String, _ aUrl: String) {
+    init(_ aName: String, _ aWeight: Int) {
         name = aName
-        url = aUrl
+        weight = aWeight
     }
 }

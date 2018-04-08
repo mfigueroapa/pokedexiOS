@@ -10,7 +10,8 @@ import UIKit
 
 class Model {
     static var dex : Array<Dex> = []
-    
+    static var pokemon = Pokemon("name", 1)
+    static var pokemonIndex = Int()
     static func initialize() {
         print("Model initialized")
     }

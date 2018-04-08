@@ -22,6 +22,7 @@
 		22B0CB4920798DF000126A46 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB4820798DF000126A46 /* GradientView.swift */; };
 		22B0CB4C20798F2C00126A46 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB4B20798F2C00126A46 /* RoundedButton.swift */; };
 		22B0CB4E207990F700126A46 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB4D207990F700126A46 /* RoundedImageView.swift */; };
+		22B0CB5020799B6900126A46 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0CB4F20799B6900126A46 /* PokemonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		22B0CB4820798DF000126A46 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		22B0CB4B20798F2C00126A46 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		22B0CB4D207990F700126A46 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		22B0CB4F20799B6900126A46 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				223CC6EC20759ED10012EEC6 /* PokeCollectionCellViewController.swift */,
+				22B0CB4F20799B6900126A46 /* PokemonViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				223CC6E020759A1C0012EEC6 /* Pokedex.xcdatamodeld in Sources */,
 				223CC71C2076A8C20012EEC6 /* Forms.swift in Sources */,
 				22B0CB4920798DF000126A46 /* GradientView.swift in Sources */,
+				22B0CB5020799B6900126A46 /* PokemonViewController.swift in Sources */,
 				223CC6D820759A1C0012EEC6 /* AppDelegate.swift in Sources */,
 				223CC6ED20759ED10012EEC6 /* PokeCollectionCellViewController.swift in Sources */,
 				223CC6F62075D3D80012EEC6 /* Model.swift in Sources */,

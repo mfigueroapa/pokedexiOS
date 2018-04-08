@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Poke Collection Cell View Controller-->
+        <!--Pokedex-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PokeCollectionCellViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSM-KK-mN1" userLabel="circle" customClass="RoundedImageView" customModule="Pokedex" customModuleProvider="target">
                                                     <rect key="frame" x="23" y="23" width="102" height="106"/>
-                                                    <color key="backgroundColor" red="0.97591793469999999" green="1" blue="0.97587887650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="1" green="0.44707231194571018" blue="0.4647025828568957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kky-nt-FMC" userLabel="pokemonImage">
                                                     <rect key="frame" x="0.0" y="0.0" width="148" height="144"/>
@@ -102,14 +102,42 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6IF-ZD-PhE"/>
+                    <navigationItem key="navigationItem" title="Pokedex" id="6IF-ZD-PhE"/>
                     <connections>
                         <outlet property="collectionView" destination="ctK-v8-yfF" id="l6m-fJ-YGA"/>
+                        <segue destination="ecw-tE-b8i" kind="show" identifier="pokemonInfo" id="r1i-xR-Fjj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1184.8" y="790.25487256371821"/>
+        </scene>
+        <!--Pokemon View Controller-->
+        <scene sceneID="LMz-D7-SoG">
+            <objects>
+                <viewController id="ecw-tE-b8i" customClass="PokemonViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Fm-7w-ZrF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMN-aR-K7v">
+                                <rect key="frame" x="107" y="82" width="160" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lzQ-hJ-X1r"/>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonName" destination="sMN-aR-K7v" id="OZG-Oo-3vg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dtk-jU-LQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208.8000000000002" y="725.48725637181417"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dsF-tm-mB5">
@@ -119,6 +147,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FIt-Od-SFw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.33003929520000003" blue="0.27974658229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
